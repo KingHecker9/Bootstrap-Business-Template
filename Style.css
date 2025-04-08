@@ -171,9 +171,13 @@ body{
 }
 .play span{
     padding: 5px 4px;
-
+    border-radius: 6px;
     font-size: 50px;
     font-weight: 100;
+}
+.intro{
+    display: flex;
+    align-items: center;
 }
 .Home-Tab-Pic{
     width: 100%;
@@ -190,6 +194,15 @@ body{
         flex-direction: column;
         padding-top: 20%;
         padding-bottom: 5%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .Home-buts{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .play{
+        width: 55px;
     }
     .Home-Tab-Pic img{
         width: 100%;
@@ -253,7 +266,7 @@ body{
     /* margin: 10px; */
 }
 .Services-Tab button:hover{
-    background: dodgerblue;
+    background: #155bd5;
     color: white;
     
 }
@@ -283,6 +296,13 @@ body{
     }
     .Services-Tab-Text p{
         font-size: 15px;
+    }
+    .buts{
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+        height: 15em;
+        margin-left: 0px;
     }
     .Services-Tab button{
         font-size: 15px;
@@ -496,6 +516,9 @@ border-bottom: 5px solid #155bd5;
 @media (max-width: 768px) {
     .recent-works{
         flex-direction: column;
+        width: 313px;
+        justify-content: center;
+        padding: 20px;
     }
     .recent-tabs{
         flex-wrap: wrap;
@@ -661,208 +684,170 @@ border-bottom: 5px solid #155bd5;
     }
 /* End of Pricing Tab */
 /* Start of Teams Tab */
+
 .Teams-Tab{
     display: flex;
     justify-content: center;
-    padding: 50px;
-    width: 100%;
-    margin-top: 3%;
-    margin-bottom: 50%;
-    align-items: center;
-    background: white;
+    flex-wrap: wrap;
 }
+
 .Tm-1{
-    background-image: url(Pics/team-1.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 385px;
-    height: 355px;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-end;
     border-radius: 10px;
-    padding-top: 20.6%;
-    margin: 10px;
-    position: relative;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* bottom-heavy shadow */
+    transition: all 0.3s ease-in-out;
 }
-.Tm-2{
-    background-image: url(Pics/team-2.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 385px;
-    height: 355px;
-    border-radius: 10px;
-    padding-top: 20.6%;
-    margin: 10px;
-    position: relative;
-}.Tm-3{
-    background-image: url(Pics/team-3.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 385px;
-    height: 355px;
-    border-radius: 10px;
-    padding-top: 20.6%;
-    margin: 10px;
-    position: relative;
-}
-.tm-blue{
-    background: white;
-    position: relative;
-    color: white;
-    height: 100px;
-    text-align: center;
-    padding: 10px;
-    border-radius: 0px 0px 10px 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.tm-blue h1{
-    color: #333;
-    padding-top: 10px;
-}
-.tm-blue p{
-    color: #155bd5;
-}
+
 .Tm-1:hover{
+    box-shadow: 0px 2px 10px 0px #b9b2b23f;
+    transition: all 0.3s ease-in;
     .tm-hide{
-        opacity: 100%;
-        height: 130px;
-        transition: width 0.5s, height 0.5s;
+        display: initial;
+        transition: all 0.3s ease-in-out;
+        pointer-events: initial;
 
-    }
-}
-.Tm-2:hover{
-    .tm-hide{
-        opacity: 100%;
-        height: 130px;
-        transition: width 0.5s, height 0.5s;
-
-    }
-}
-.Tm-3:hover{
-    .tm-hide{
-        opacity: 100%;
-        height: 130px;
-        transition: width 0.5s, height 0.5s;
-
-    }
-}
-.tm-hide{
-    background: #155bd5;
-    bottom: 0;
-    color: white;
-    width: 385px;
-    height: 230px;
-    position: absolute;
-    height: 100px;
-    text-align: center;
-    font-size: 30px;
-    padding: 10px;
-    border-radius: 0px 0px 10px 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    opacity: 0%;
-}
-.tm-hide i{
-    color: #7c7676;
-}
-.social-parent{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    position: relative;
-    margin-bottom: 10px;
-}
-.social-ic{
-    display: flex;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    top: -30px;
-    background: #ffff;
-    padding: 10px;
-    width: 130px;
-    border-radius: 25px 25px;
-}
-
-
-@media (max-width: 768px) {
-    .Teams-Tab{
-        flex-direction: column;
-        padding: 20px;
-    }
-    .Tm-1, .Tm-2, .Tm-3{
-        width: 100%;
-        margin-left: 0px;
-        padding-top: 16em;
-    }
-    .Tm-1 img, .Tm-2 img, .Tm-3 img{
-        width: 100%;
-        margin: 0;
     }
     .tm-blue{
-        background: white;
-        position: relative;
-        color: white;
-        height: 100px;
-        text-align: center;
-        padding: 30px;
-        border-radius: 0px 0px 10px 10px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-    .tm-blue h1{
-        font-size: 20px;
-    }
-    .tm-blue p{
-        font-size: 15px;
+        display: none;
     }
 }
-    .tm-hide h1{
-        font-size: 20px;
-    }
-    .tm-hide p{
-        font-size: 15px;
-    }
-    .tm-hide i{
-        font-size: 15px;
-    }
-    .social-parent{
-        gap: 5px;
-    }
-    .social-ic{
-        width: 100%;
-        padding: 5px;
-        gap: 5px;
-    }
-    .social-ic i{
-        font-size: 20px;
-    }
-    .social-ic p{
-        font-size: 15px;
-    }
-    .social-ic i{
-        font-size: 15px;
-    }
-    .social-ic p{
-        font-size: 10px;
-    }
-    .tm-blue h1{
-        font-size: 15px;
-    }
-    .tm-blue p{
-        font-size: 10px;
-    }
-    .tm-hide h1{
-        font-size: 15px;
-    }
-    .tm-hide p{
-        font-size: 10px;
-    }
-    .tm-hide i{
-        font-size: 10px;
-    }
-    .social-parent{
-        gap: 5px;
-    }
+.Tm-1 img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: all 0.3s ease-in;
+    z-index: -999;
+}
+.Tm-1:hover img{
+    transform: scale(1.1) rotate(0.5deg);
+}
 
+.Tm-2{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-end;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* bottom-heavy shadow */
+    transition: all 0.3s ease-in-out;
+}
 
+.Tm-2:hover{
+    box-shadow: 0px 2px 10px 0px #b9b2b23f;
+    transition: all 0.3s ease-in;
+    .tm-hide{
+        display: initial;
+        transition: all 0.3s ease-in-out;
+        pointer-events: initial;
+
+    }
+    .tm-blue{
+        display: none;
+    }
+}
+.Tm-2 img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: all 0.3s ease-in;
+    z-index: -999;
+}
+.Tm-2:hover img{
+    transform: scale(1.1) rotate(0.5deg);
+}
+
+.Tm-3{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-end;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* bottom-heavy shadow */
+    transition: all 0.3s ease-in-out;
+}
+
+.Tm-3:hover{
+    box-shadow: 0px 2px 10px 0px #b9b2b23f;
+    transition: all 0.3s ease-in;
+    .tm-hide{
+        display: initial;
+        transition: all 0.3s ease-in-out;
+        pointer-events: initial;
+
+    }
+    .tm-blue{
+        display: none;
+    }
+}
+.Tm-3 img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: all 0.3s ease-in;
+    z-index: -999;
+}
+.Tm-3:hover img{   transform: scale(1.1) rotate(0.5deg);
+}
+
+.tm-blue{
+    position: absolute;
+    background: #ffffff;
+    color: black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 49px;
+    padding: 50px 20px;
+    text-align: center;
+    z-index: -2;
+    margin-top: 67%;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* bottom-heavy shadow */
+
+}
+
+.tm-hide{
+    position: absolute;
+    display: none;
+    pointer-events: none;
+    width: 100%;
+    background: #155bd5;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 42%;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* bottom-heavy shadow */
+    transition: all 1s ease-in;
+    z-index: 1;
+}
 
 
 
@@ -873,7 +858,7 @@ border-bottom: 5px solid #155bd5;
     background: #155bd5;
     text-align: center;
     padding: 50px;
-    height: 475px;
+    height: 535px;
     width: 100%;
     padding-top: 100px;   
     padding-left: 25%;
@@ -945,11 +930,13 @@ border-bottom: 5px solid #155bd5;
 .zoom-tab{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     padding: 50px;
     width: 100%;
     /* margin-top: %; */
     align-items: center;
     background: white;
+    position: relative;
 }
 .zoom{
     width: 350px;
@@ -958,6 +945,7 @@ border-bottom: 5px solid #155bd5;
     justify-content: center;
     align-items: center;
     text-align: left;
+    margin: 20px;
 }
 .zoom h1{
     font-size: 20px;
@@ -975,24 +963,30 @@ border-bottom: 5px solid #155bd5;
 }
 .zoom-img{
     width: 350px;
-    height: 230px;
+    height: 200px;
     overflow: hidden;
     position: relative;
-    padding-top: 160px;
-    padding-left: 189px; 
-    border-radius: 3px;
+    margin: 20px;
     display: flex;
-    margin: 10%;
+    flex-direction: column;
+    justify-content: center;
+    align-items:end ;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* bottom-heavy shadow */
+    transition: all 0.3s ease-in-out;
+    border-radius: 6px;
+    z-index: 1;
 }
+
+
 .zoom-img .zooom{
-   position: absolute;
-   top: 0;
-   left: 0;
-   height: 100%;
-   width: 100%;
-   object-fit: cover;
-   transition: all 0.3s ease-in;
-   z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: all 0.3s ease-in;
+    z-index: -999;
 }
 .zoom:hover .zooom{
     transform: scale(1.1) rotate(0.5deg);
@@ -1041,6 +1035,10 @@ border-bottom: 5px solid #155bd5;
     }
     .zoom p{
         font-size: 15px;
+    }
+    .zoom{
+        height: 300px;
+        width: 300px;
     }
     .zoom-img{
         width: 100%;
@@ -1252,6 +1250,7 @@ border-bottom: 5px solid #155bd5;
         margin-left: 0px;
     }
     .righty{
+        height: 720px;
         width: 100%;
         margin-left: 0px;
     }
